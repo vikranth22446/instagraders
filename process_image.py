@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-IMAGE_SIZE = 1800
+IMAGE_SIZE = 2500
 BINARY_THREHOLD = 180
 
 
