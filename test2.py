@@ -9,3 +9,4 @@ img = process_image_for_ocr('test2.png', IMAGE_SIZE=1800)
 print(pytesseract.image_to_string(img))
 # OR explicit beforehand converting
 # print(pytesseract.image_to_string(Image.fromarray(img)))
+print("hello world")
