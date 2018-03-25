@@ -8,7 +8,8 @@ from app.main import main
 
 
 class User(db.Model):
-    username = db.Column(db.String)
+    __tablename__ = "user"
+    username = db.Column(db.String,primary_key=True)
     password = db.Column(db.String)
 
 
