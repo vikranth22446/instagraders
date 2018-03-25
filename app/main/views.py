@@ -7,6 +7,11 @@ from app import lm, db
 from app.main import main
 
 
+class User(db.Model):
+    username = db.Column(db.String)
+    password = db.Column(db.String)
+
+
 @main.before_app_request
 def before_request():
     """
@@ -16,19 +21,19 @@ def before_request():
         g.user = current_user
 
 
-#
-# @lm.user_loader
-# def load_user(user_id):
-#     """
-#     Tries to Load the User.
-#     :param user_id:
-#     :return:
-#     """
-#     try:
-#         return User.query.get(user_id)
-#     except Exception as e:
-#         print(e)
-#         return None
+@lm.user_loader
+def load_user(user_id):
+    """
+    Tries to Load the User.
+    :param user_id:
+    :return:
+    """
+    try:
+        return User.query.get(user_id)
+    except Exception as e:
+        print(e)
+        return None
+
 
 @main.route('/')
 def index():
