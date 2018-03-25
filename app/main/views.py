@@ -39,3 +39,7 @@ def load_user(user_id):
 @main.route('/')
 def index():
     return render_template('index.html')
+
+@main.route('/tests')
+def tests():
+    return render_template('tests.html')

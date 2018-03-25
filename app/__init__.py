@@ -16,7 +16,6 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 migrate = Migrate(render_as_batch=True)
 lm = LoginManager()
-db = SQLAlchemy()
 jsglue = JSGlue()
 csrf = CSRFProtect()
 
@@ -35,7 +34,7 @@ def create_app(config_name=None):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
     db.init_app(app)
-
+    lm.init_app(app)
     jsglue.init_app(app)
     if config_name != 'testing':
         csrf.init_app(app)
