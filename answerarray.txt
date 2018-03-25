@@ -1,0 +1,14 @@
+answers = [
+	"brain",
+	"dependent variable",
+	"missed versus distributed practice"
+	"fluid intelligence",
+	"reason"
+	"body cycle"
+	"task performance"
+	"gravity is blue",
+	"computers have stuff",
+	"dedilidadilida"
+	"Chairs have 2 legs",
+	"Pycharm does Java"
+]
